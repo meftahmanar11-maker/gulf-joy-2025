@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useI18n } from "@/i18n/LanguageProvider";
+import logo from "@/assets/gulf-joy-logo.png.asset.json";
 
 export function Header() {
   const { t } = useI18n();
@@ -17,9 +18,7 @@ export function Header() {
       <div className="container mx-auto px-6 lg:px-8 py-5 flex flex-col gap-4">
         <div className="flex items-center justify-between gap-4">
           <Link to="/" className="flex items-center gap-2 group">
-            <span className="inline-flex h-9 w-9 items-center justify-center rounded-md bg-gradient-accent text-brand-deep font-display font-bold">
-              GJ
-            </span>
+            <img src={logo.url} alt="Gulf Joy" className="h-10 w-10 rounded-md bg-white object-contain p-1" />
             <span className="font-display text-xl font-bold tracking-tight">
               Gulf Joy
             </span>
