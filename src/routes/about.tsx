@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { useI18n } from "@/i18n/LanguageProvider";
+import logo from "@/assets/gulf-joy-logo.png.asset.json";
+
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -19,10 +21,17 @@ function AboutPage() {
   return (
     <>
       <section className="bg-gradient-hero text-primary-foreground py-20">
-        <div className="container mx-auto px-6 lg:px-8 max-w-3xl">
-          <p className="text-sm uppercase tracking-wider text-secondary font-semibold mb-3">{t.about.eyebrow}</p>
-          <h1 className="text-5xl font-display font-bold text-balance mb-5">{t.about.title}</h1>
-          <p className="text-lg text-primary-foreground/80">{t.about.lede}</p>
+        <div className="container mx-auto px-6 lg:px-8 grid md:grid-cols-[1fr_auto] gap-10 items-center">
+          <div className="max-w-3xl">
+            <p className="text-sm uppercase tracking-wider text-secondary font-semibold mb-3">{t.about.eyebrow}</p>
+            <h1 className="text-5xl font-display font-bold text-balance mb-5">{t.about.title}</h1>
+            <p className="text-lg text-primary-foreground/80">{t.about.lede}</p>
+          </div>
+          <img
+            src={logo.url}
+            alt="Gulf Joy Import Export logo"
+            className="hidden md:block w-56 lg:w-64 h-auto rounded-2xl bg-white p-4 shadow-lg justify-self-end"
+          />
         </div>
       </section>
 
