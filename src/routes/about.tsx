@@ -30,7 +30,7 @@ function AboutPage() {
           <img
             src={logo.url}
             alt="Gulf Joy Import Export logo"
-            className="hidden md:block w-56 lg:w-64 h-auto rounded-2xl bg-white p-4 shadow-lg justify-self-end"
+            className="w-40 sm:w-48 lg:w-64 h-auto rounded-2xl bg-white p-4 shadow-lg justify-self-center md:justify-self-end"
           />
         </div>
       </section>
