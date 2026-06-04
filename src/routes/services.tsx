@@ -42,9 +42,23 @@ function ProductsPage() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {t.productsPage.list.map((p, i) => (
               <article key={p.title} className="p-8 bg-card text-card-foreground rounded-2xl border border-border hover:shadow-elegant transition-shadow">
-                <div className="h-16 w-16 rounded-xl bg-brand/10 flex items-center justify-center mb-5 text-4xl">
-                  {emojis[i]}
-                </div>
+                {productImages[i] ? (
+                  <div className={`mb-5 grid gap-2 ${productImages[i].length > 1 ? "grid-cols-2" : "grid-cols-1"}`}>
+                    {productImages[i].map((img) => (
+                      <img
+                        key={img.src}
+                        src={img.src}
+                        alt={img.alt}
+                        loading="lazy"
+                        className="w-full h-40 object-cover rounded-xl"
+                      />
+                    ))}
+                  </div>
+                ) : (
+                  <div className="h-16 w-16 rounded-xl bg-brand/10 flex items-center justify-center mb-5 text-4xl">
+                    {emojis[i]}
+                  </div>
+                )}
                 <h2 className="text-2xl font-display font-bold mb-3">{p.title}</h2>
                 <p className="text-muted-foreground leading-relaxed mb-5">{p.desc}</p>
                 <ul className="space-y-2 text-sm">
