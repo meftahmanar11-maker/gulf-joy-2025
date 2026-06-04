@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useI18n } from "@/i18n/LanguageProvider";
+import logo from "@/assets/gulf-joy-logo.jpg.asset.json";
 
 export function Footer() {
   const { t } = useI18n();
