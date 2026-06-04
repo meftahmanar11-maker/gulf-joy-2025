@@ -58,14 +58,27 @@ function ProductsPage() {
               <article key={p.title} className="p-8 bg-card text-card-foreground rounded-2xl border border-border hover:shadow-elegant transition-shadow">
                 {productImages[i] ? (
                   <div className={`mb-5 grid gap-2 ${productImages[i].length > 1 ? "grid-cols-2" : "grid-cols-1"}`}>
-                    {productImages[i].map((img) => (
-                      <img
-                        key={img.src}
-                        src={img.src}
-                        alt={img.alt}
-                        loading="lazy"
-                        className="w-full h-40 object-cover rounded-xl"
-                      />
+                    {productImages[i].map((m) => (
+                      m.type === "video" ? (
+                        <video
+                          key={m.src}
+                          src={m.src}
+                          aria-label={m.alt}
+                          autoPlay
+                          muted
+                          loop
+                          playsInline
+                          className="w-full h-40 object-cover rounded-xl"
+                        />
+                      ) : (
+                        <img
+                          key={m.src}
+                          src={m.src}
+                          alt={m.alt}
+                          loading="lazy"
+                          className="w-full h-40 object-cover rounded-xl"
+                        />
+                      )
                     ))}
                   </div>
                 ) : (
