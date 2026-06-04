@@ -182,6 +182,7 @@ const fr: Dict = {
         { title: "Poivrons", desc: "Poivrons croquants et brillants en rouge, jaune et vert — calibrés pour la couleur et l'uniformité.", points: ["Rouge / Jaune / Vert", "Catégories premium & standard", "Cartons ventilés"] },
         { title: "Raisins", desc: "Raisins de table sans pépins, gros grains et excellente tenue — en barquettes ou en vrac.", points: ["Variétés sans pépins", "Barquettes ou vrac", "Transport réfrigéré"] },
         { title: "Pastèques", desc: "Pastèques sucrées et rafraîchissantes à la chair rouge profond — avec ou sans pépins.", points: ["Avec ou sans pépins", "Bin ou carton", "Toute l'année"] },
+        { title: "Pommes", desc: "Pommes Royal Gala croquantes et sucrées — qualité premium, sélectionnées à la main et étiquetées individuellement pour l'export.", points: ["Variété Royal Gala", "Catégorie premium", "Chaîne du froid"] },
       ],
     },
     contact: {
