@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useI18n } from "@/i18n/LanguageProvider";
+import logo from "@/assets/gulf-joy-logo.jpg.asset.json";
 
 export function Header() {
   const { t } = useI18n();
