@@ -82,6 +82,7 @@ const en = {
         { title: "Bell Peppers", desc: "Crisp, glossy bell peppers in red, yellow and green — graded for color, size and uniformity.", points: ["Red / Yellow / Green", "Premium & standard grades", "Vented cartons"] },
         { title: "Grapes", desc: "Sweet seedless table grapes with full berry size and excellent shelf life — packed in clamshells or bulk.", points: ["Seedless varieties", "Clamshell or bulk", "Refrigerated transport"] },
         { title: "Watermelons", desc: "Sweet, refreshing watermelons with deep red flesh — available in seeded and seedless varieties.", points: ["Seeded / Seedless", "Bin or carton pack", "Year-round sourcing"] },
+        { title: "Apples", desc: "Crisp, sweet Royal Gala apples — premium quality, hand-selected and individually labeled for export markets.", points: ["Royal Gala variety", "Premium quality grade", "Cold-chain shipping"] },
       ],
     },
     contact: {
