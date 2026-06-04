@@ -37,7 +37,7 @@ export const Route = createFileRoute("/services")({
   component: ProductsPage,
 });
 
-const emojis = ["🍌", "🧅", "🍈", "🫑", "🍇", "🍉"];
+const emojis = ["🍌", "🧅", "🍈", "🫑", "🍇", "🍉", "🍎"];
 
 function ProductsPage() {
   const { t } = useI18n();
