@@ -1,6 +1,15 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { useI18n } from "@/i18n/LanguageProvider";
+import banana1 from "@/assets/banana-1.jpeg.asset.json";
+import banana2 from "@/assets/banana-2.jpeg.asset.json";
+
+const productImages: Record<number, { src: string; alt: string }[]> = {
+  0: [
+    { src: banana1.url, alt: "Premium green bananas in export packaging" },
+    { src: banana2.url, alt: "Fresh banana clusters ready for shipment" },
+  ],
+};
 
 export const Route = createFileRoute("/services")({
   head: () => ({
