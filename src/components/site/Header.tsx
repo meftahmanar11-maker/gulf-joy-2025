@@ -17,10 +17,8 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-brand/95 backdrop-blur supports-[backdrop-filter]:bg-brand/80 text-primary-foreground">
       <div className="container mx-auto px-6 lg:px-8 py-5 flex flex-col gap-4">
         <div className="flex items-center justify-between gap-4">
-          <Link to="/" className="flex items-center gap-2 group">
-            <span className="inline-flex h-9 w-9 items-center justify-center rounded-md bg-gradient-accent text-brand-deep font-display font-bold">
-              GJ
-            </span>
+          <Link to="/" className="flex items-center gap-3 group">
+            <img src={logo.url} alt="Gulf Joy Import Export logo" className="h-11 w-11 rounded-md bg-white object-contain p-1" />
             <span className="font-display text-xl font-bold tracking-tight">
               Gulf Joy
             </span>
