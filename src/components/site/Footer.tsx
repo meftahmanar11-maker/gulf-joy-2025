@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useI18n } from "@/i18n/LanguageProvider";
+import logo from "@/assets/gulf-joy-logo.jpg.asset.json";
 
 export function Footer() {
   const { t } = useI18n();
@@ -7,7 +8,10 @@ export function Footer() {
     <footer className="bg-brand-deep text-primary-foreground mt-24">
       <div className="container mx-auto px-6 lg:px-8 py-16 grid gap-12 md:grid-cols-4">
         <div className="space-y-3">
-          <div className="font-display text-2xl font-bold text-secondary">Gulf Joy</div>
+          <div className="flex items-center gap-3">
+            <img src={logo.url} alt="Gulf Joy Import Export logo" className="h-12 w-12 rounded-md bg-white object-contain p-1" />
+            <div className="font-display text-2xl font-bold text-secondary">Gulf Joy</div>
+          </div>
           <p className="text-primary-foreground/70 text-sm leading-relaxed">{t.footer.tagline}</p>
         </div>
         <div>
