@@ -5,15 +5,23 @@ import banana1 from "@/assets/banana-1.jpeg.asset.json";
 import banana2 from "@/assets/banana-2.jpeg.asset.json";
 import onion1 from "@/assets/onion-1.jpeg.asset.json";
 import onion2 from "@/assets/onion-2.jpeg.asset.json";
+import apple1 from "@/assets/apple-1.jpeg.asset.json";
+import apple2 from "@/assets/apple-2.mp4.asset.json";
 
-const productImages: Record<number, { src: string; alt: string }[]> = {
+type ProductMedia = { type: "image" | "video"; src: string; alt: string };
+
+const productImages: Record<number, ProductMedia[]> = {
   0: [
-    { src: banana1.url, alt: "Premium green bananas in export packaging" },
-    { src: banana2.url, alt: "Fresh banana clusters ready for shipment" },
+    { type: "image", src: banana1.url, alt: "Premium green bananas in export packaging" },
+    { type: "image", src: banana2.url, alt: "Fresh banana clusters ready for shipment" },
   ],
   1: [
-    { src: onion1.url, alt: "Fresh onions in red mesh export sack" },
-    { src: onion2.url, alt: "Harvested onions ready for sorting" },
+    { type: "image", src: onion1.url, alt: "Fresh onions in red mesh export sack" },
+    { type: "image", src: onion2.url, alt: "Harvested onions ready for sorting" },
+  ],
+  6: [
+    { type: "image", src: apple1.url, alt: "Royal Gala apples packed for export" },
+    { type: "video", src: apple2.url, alt: "Royal Gala apples packing line" },
   ],
 };
 
@@ -29,7 +37,7 @@ export const Route = createFileRoute("/services")({
   component: ProductsPage,
 });
 
-const emojis = ["🍌", "🧅", "🍈", "🫑", "🍇", "🍉"];
+const emojis = ["🍌", "🧅", "🍈", "🫑", "🍇", "🍉", "🍎"];
 
 function ProductsPage() {
   const { t } = useI18n();
@@ -50,14 +58,27 @@ function ProductsPage() {
               <article key={p.title} className="p-8 bg-card text-card-foreground rounded-2xl border border-border hover:shadow-elegant transition-shadow">
                 {productImages[i] ? (
                   <div className={`mb-5 grid gap-2 ${productImages[i].length > 1 ? "grid-cols-2" : "grid-cols-1"}`}>
-                    {productImages[i].map((img) => (
-                      <img
-                        key={img.src}
-                        src={img.src}
-                        alt={img.alt}
-                        loading="lazy"
-                        className="w-full h-40 object-cover rounded-xl"
-                      />
+                    {productImages[i].map((m) => (
+                      m.type === "video" ? (
+                        <video
+                          key={m.src}
+                          src={m.src}
+                          aria-label={m.alt}
+                          autoPlay
+                          muted
+                          loop
+                          playsInline
+                          className="w-full h-40 object-cover rounded-xl"
+                        />
+                      ) : (
+                        <img
+                          key={m.src}
+                          src={m.src}
+                          alt={m.alt}
+                          loading="lazy"
+                          className="w-full h-40 object-cover rounded-xl"
+                        />
+                      )
                     ))}
                   </div>
                 ) : (

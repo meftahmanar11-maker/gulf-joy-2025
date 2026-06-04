@@ -82,6 +82,7 @@ const en = {
         { title: "Bell Peppers", desc: "Crisp, glossy bell peppers in red, yellow and green — graded for color, size and uniformity.", points: ["Red / Yellow / Green", "Premium & standard grades", "Vented cartons"] },
         { title: "Grapes", desc: "Sweet seedless table grapes with full berry size and excellent shelf life — packed in clamshells or bulk.", points: ["Seedless varieties", "Clamshell or bulk", "Refrigerated transport"] },
         { title: "Watermelons", desc: "Sweet, refreshing watermelons with deep red flesh — available in seeded and seedless varieties.", points: ["Seeded / Seedless", "Bin or carton pack", "Year-round sourcing"] },
+        { title: "Apples", desc: "Crisp, sweet Royal Gala apples — premium quality, hand-selected and individually labeled for export markets.", points: ["Royal Gala variety", "Premium quality grade", "Cold-chain shipping"] },
       ],
     },
     contact: {
@@ -181,6 +182,7 @@ const fr: Dict = {
         { title: "Poivrons", desc: "Poivrons croquants et brillants en rouge, jaune et vert — calibrés pour la couleur et l'uniformité.", points: ["Rouge / Jaune / Vert", "Catégories premium & standard", "Cartons ventilés"] },
         { title: "Raisins", desc: "Raisins de table sans pépins, gros grains et excellente tenue — en barquettes ou en vrac.", points: ["Variétés sans pépins", "Barquettes ou vrac", "Transport réfrigéré"] },
         { title: "Pastèques", desc: "Pastèques sucrées et rafraîchissantes à la chair rouge profond — avec ou sans pépins.", points: ["Avec ou sans pépins", "Bin ou carton", "Toute l'année"] },
+        { title: "Pommes", desc: "Pommes Royal Gala croquantes et sucrées — qualité premium, sélectionnées à la main et étiquetées individuellement pour l'export.", points: ["Variété Royal Gala", "Catégorie premium", "Chaîne du froid"] },
       ],
     },
     contact: {
@@ -278,6 +280,7 @@ const ar: Dict = {
         { title: "الفلفل الحلو", desc: "فلفل حلو لامع وطازج بألوان أحمر وأصفر وأخضر مصنف بالحجم واللون.", points: ["أحمر / أصفر / أخضر", "درجات فاخرة وعادية", "كرتون مهوّى"] },
         { title: "العنب", desc: "عنب مائدة بدون بذور بحبات كبيرة وعمر تخزين ممتاز — معبأ في علب أو سائب.", points: ["أصناف بدون بذور", "علب أو سائب", "نقل مبرّد"] },
         { title: "البطيخ", desc: "بطيخ حلو ومنعش بلحم أحمر داكن — متوفر مع البذور وبدونها.", points: ["مع/بدون بذور", "صناديق أو كرتون", "متوفر طوال السنة"] },
+        { title: "التفاح", desc: "تفاح رويال غالا مقرمش وحلو — جودة فاخرة، مختار يدويًا ومُلصق بشكل فردي لأسواق التصدير.", points: ["صنف رويال غالا", "درجة فاخرة", "شحن مبرّد"] },
       ],
     },
     contact: {
