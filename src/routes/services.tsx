@@ -5,15 +5,23 @@ import banana1 from "@/assets/banana-1.jpeg.asset.json";
 import banana2 from "@/assets/banana-2.jpeg.asset.json";
 import onion1 from "@/assets/onion-1.jpeg.asset.json";
 import onion2 from "@/assets/onion-2.jpeg.asset.json";
+import apple1 from "@/assets/apple-1.jpeg.asset.json";
+import apple2 from "@/assets/apple-2.mp4.asset.json";
 
-const productImages: Record<number, { src: string; alt: string }[]> = {
+type ProductMedia = { type: "image" | "video"; src: string; alt: string };
+
+const productImages: Record<number, ProductMedia[]> = {
   0: [
-    { src: banana1.url, alt: "Premium green bananas in export packaging" },
-    { src: banana2.url, alt: "Fresh banana clusters ready for shipment" },
+    { type: "image", src: banana1.url, alt: "Premium green bananas in export packaging" },
+    { type: "image", src: banana2.url, alt: "Fresh banana clusters ready for shipment" },
   ],
   1: [
-    { src: onion1.url, alt: "Fresh onions in red mesh export sack" },
-    { src: onion2.url, alt: "Harvested onions ready for sorting" },
+    { type: "image", src: onion1.url, alt: "Fresh onions in red mesh export sack" },
+    { type: "image", src: onion2.url, alt: "Harvested onions ready for sorting" },
+  ],
+  6: [
+    { type: "image", src: apple1.url, alt: "Royal Gala apples packed for export" },
+    { type: "video", src: apple2.url, alt: "Royal Gala apples packing line" },
   ],
 };
 
