@@ -101,9 +101,36 @@ function HomePage() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {t.products.map((p, i) => (
               <div key={p.title} className="group p-7 bg-card text-card-foreground rounded-2xl border border-border hover:border-brand/30 hover:shadow-elegant transition-all">
-                <div className="h-14 w-14 rounded-xl bg-brand/10 flex items-center justify-center mb-5 text-3xl">
-                  {productEmojis[i]}
-                </div>
+                {productImages[i] ? (
+                  <div className={`mb-5 grid gap-2 ${productImages[i].length > 1 ? "grid-cols-2" : "grid-cols-1"}`}>
+                    {productImages[i].map((m) => (
+                      m.type === "video" ? (
+                        <video
+                          key={m.src}
+                          src={m.src}
+                          aria-label={m.alt}
+                          autoPlay
+                          muted
+                          loop
+                          playsInline
+                          className="w-full h-32 object-cover rounded-xl"
+                        />
+                      ) : (
+                        <img
+                          key={m.src}
+                          src={m.src}
+                          alt={m.alt}
+                          loading="lazy"
+                          className="w-full h-32 object-cover rounded-xl"
+                        />
+                      )
+                    ))}
+                  </div>
+                ) : (
+                  <div className="h-14 w-14 rounded-xl bg-brand/10 flex items-center justify-center mb-5 text-3xl">
+                    {productEmojis[i]}
+                  </div>
+                )}
                 <h3 className="text-xl font-display font-bold mb-2">{p.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
               </div>
